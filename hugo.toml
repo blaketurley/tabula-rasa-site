@@ -1,0 +1,73 @@
+# ========================================
+# Tabula Rasa — Podcast with Blake Turley
+# Hugo Configuration
+# ========================================
+
+baseURL = "https://tabularasawithblaketurley.com/"
+languageCode = "en-us"
+title = "Tabula Rasa"
+
+paginate = 20
+summaryLength = 50
+enableRobotsTXT = true
+enableEmoji = false
+
+[build]
+  writeStats = true
+
+[params]
+  tagline = "Long-form conversations about law, technology, and the structures we build our lives on top of."
+  description = "Tabula Rasa is a podcast by Blake Turley — attorney, builder, and lifelong student. Long-form conversations about law, technology, and the invisible architecture of everyday life."
+  author = "Blake Turley"
+  email = "hello@turleylaw.com"
+  personalURL = "https://blaketurley.com"
+  firmURL = "https://turleylaw.com"
+  youtubeChannel = "https://youtube.com/@blaketurley"
+
+  [params.social]
+    youtube = "https://youtube.com/@blaketurley"
+    linkedin = "https://linkedin.com/in/blaketurley"
+    spotify = "#"
+    rss = "#"
+
+# Navigation
+[[menu.main]]
+  name = "Episodes"
+  url = "#episodes"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "#about"
+  weight = 2
+
+[[menu.main]]
+  name = "Listen"
+  url = "#listen"
+  weight = 3
+
+# Markup
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Outputs
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[permalinks]
+  episodes = "/episodes/:slug/"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableSVG = false
+
+[privacy]
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.youtube]
+    privacyEnhanced = true

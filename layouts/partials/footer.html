@@ -1,0 +1,21 @@
+<!-- Footer -->
+<div class="neon-stripe"></div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-name">Tabula Rasa</div>
+        <div class="footer-host">A podcast by <a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}">Blake Turley</a></div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="{{ .Site.Params.social.youtube | default "#" }}">YouTube</a>
+          <a href="{{ .Site.Params.social.spotify | default "#" }}">Spotify</a>
+          <a href="{{ .Site.Params.social.rss | default "#" }}">RSS</a>
+        </div>
+        <a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}" class="footer-back">blaketurley.com &rarr;</a>
+      </div>
+    </div>
+    <div class="footer-manifesto">Every episode starts with a blank slate.</div>
+  </div>
+</footer>

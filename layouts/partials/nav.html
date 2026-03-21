@@ -1,0 +1,15 @@
+<!-- Navigation — Tabula Rasa -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-live"></div>
+      <span class="nav-logo-text">Tabula Rasa</span>
+    </a>
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+      <li><a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}" class="nav-back">blaketurley.com</a></li>
+    </ul>
+  </div>
+</nav>

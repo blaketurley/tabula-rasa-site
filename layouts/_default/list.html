@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">{{ .Title }}</div>
+    <h1 class="section-heading">{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="episode reveal">
+      <span class="episode-number">{{ .Params.number | default "—" }}</span>
+      <div class="episode-info">
+        <h3 class="episode-title">{{ .Title }}</h3>
+        <div class="episode-meta">{{ .Date.Format "Jan 2006" }}{{ with .Params.duration }} &middot; {{ . }}{{ end }}</div>
+      </div>
+      <div class="episode-play-icon">
+        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

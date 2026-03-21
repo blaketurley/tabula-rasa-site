@@ -1,0 +1,321 @@
+{{ define "main" }}
+
+<!-- Hero — MASSIVE, cinematic, unforgettable -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-live-tag">A Podcast by Blake Turley</div>
+    <h1 class="hero-title">Tabula<br><span class="hero-title-glow">Rasa.</span></h1>
+    <div class="hero-subtitle">Blank Slate &middot; Long-Form Conversations</div>
+
+    <p class="hero-tagline">
+      The law podcast for people who think lawyers are <em>boring.</em>
+    </p>
+
+    <div class="hero-waveform">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <p class="hero-desc">
+      Every episode starts with a question I can't stop thinking about. Where it goes from there is anyone's guess. Law, technology, business, and the invisible architecture of everyday life.
+    </p>
+
+    <div class="hero-platforms">
+      <a href="{{ .Site.Params.social.youtube | default "#" }}" class="platform-btn platform-btn--primary">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" fill="currentColor" stroke="none"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#060C1F" stroke="none"/></svg>
+        Watch on YouTube
+      </a>
+      <a href="{{ .Site.Params.social.spotify | default "#" }}" class="platform-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" fill="currentColor"/></svg>
+        Spotify
+      </a>
+      <a href="{{ .Site.Params.social.rss | default "#" }}" class="platform-btn">RSS Feed</a>
+    </div>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- THE MANIFESTO — What this show is really about -->
+<section class="section manifesto-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">The Premise</div>
+
+    <div class="manifesto-quote reveal">
+      Law is the most <span class="neon-word">fascinating</span> subject on earth. The problem is, most people only experience it at its <span class="neon-word--pink">worst</span> &mdash; confusing, expensive, and intentionally <span class="neon-word--green">intimidating.</span>
+    </div>
+
+    <p class="manifesto-attribution reveal">This show exists to fix that.</p>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- TOPICS — What You'll Hear -->
+<section class="section topics-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Territory</div>
+    <h2 class="section-heading reveal">What you'll <em>hear.</em></h2>
+    <p class="section-desc reveal">Six lanes. No guardrails. Every episode picks a question and follows it wherever it goes.</p>
+
+    <div class="topics-grid">
+      <div class="topic-card topic-card--law reveal reveal-delay-1">
+        <span class="topic-icon">&sect;</span>
+        <div class="topic-name">Law</div>
+        <p class="topic-desc">Contract clauses that changed history. Supreme Court cases that should scare you. Why your landlord's lease is structured the way it is.</p>
+      </div>
+
+      <div class="topic-card topic-card--tech reveal reveal-delay-2">
+        <span class="topic-icon">&lt;/&gt;</span>
+        <div class="topic-name">Technology</div>
+        <p class="topic-desc">AI terms of service nobody reads. Open source licensing wars. The legal scaffolding underneath every app on your phone.</p>
+      </div>
+
+      <div class="topic-card topic-card--business reveal reveal-delay-3">
+        <span class="topic-icon">&Delta;</span>
+        <div class="topic-name">Business</div>
+        <p class="topic-desc">Operating agreements founders sign without reading. The economics of starting a law firm. Why most "standard" contracts are anything but.</p>
+      </div>
+
+      <div class="topic-card topic-card--culture reveal reveal-delay-1">
+        <span class="topic-icon">&para;</span>
+        <div class="topic-name">Culture</div>
+        <p class="topic-desc">How legal structures shape music, art, food, and everything else. The invisible rules you follow every day without knowing it.</p>
+      </div>
+
+      <div class="topic-card topic-card--philosophy reveal reveal-delay-2">
+        <span class="topic-icon">&infin;</span>
+        <div class="topic-name">Philosophy</div>
+        <p class="topic-desc">What is justice, really? Where does a contract end and a relationship begin? When does compliance become theater?</p>
+      </div>
+
+      <div class="topic-card topic-card--wildcard reveal reveal-delay-3">
+        <span class="topic-icon">&#10043;</span>
+        <div class="topic-name">Wildcard</div>
+        <p class="topic-desc">Hot peppers. Photography. Homebrew. Whatever I'm obsessed with this week that somehow always ties back to the law.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- Latest Episode — Dynamic -->
+{{ $episodes := where .Site.RegularPages "Section" "episodes" }}
+{{ $latest := index $episodes 0 }}
+{{ with $latest }}
+<section class="section latest-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Now Playing</div>
+
+    <div class="latest-card reveal">
+      <div class="latest-card-inner">
+        <div class="latest-artwork">
+          <div class="latest-artwork-wave">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="latest-artwork-title">Tabula Rasa</div>
+          <div class="latest-artwork-sub">With Blake Turley</div>
+        </div>
+        <div class="latest-info">
+          <div class="latest-badge">New Episode</div>
+          <div class="latest-ep-num">EP {{ .Params.number | default "???" }}</div>
+          <h2 class="latest-title">{{ .Title }}</h2>
+          <p class="latest-desc">{{ .Params.description }}</p>
+          <div class="latest-meta">{{ .Params.duration | default "" }} &middot; {{ .Date.Format "Jan 2006" }}</div>
+          <a href="{{ .Permalink }}" class="latest-play">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Listen Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<div class="neon-stripe"></div>
+
+<!-- Pull Quote Interstitial -->
+<section class="pullquote-section">
+  <div class="container">
+    <p class="pullquote-text reveal">
+      Every contract tells a <span class="neon-word">story.</span> Most people just skip to the <span class="neon-word--gold">signature page.</span>
+    </p>
+    <span class="pullquote-dash reveal"></span>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- Episodes Archive -->
+<section id="episodes" class="section episodes-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">All Episodes</div>
+    <h2 class="section-heading reveal">The <em>archive.</em></h2>
+    <p class="section-desc reveal">Every conversation, from the beginning. No filler episodes. No ads. Just the thread, followed to wherever it goes.</p>
+
+    <div class="episode-list">
+      {{ $allEpisodes := where .Site.RegularPages "Section" "episodes" }}
+      {{ range $allEpisodes }}
+      <a href="{{ .Permalink }}" class="episode reveal">
+        <span class="episode-number">{{ .Params.number | default "—" }}</span>
+        <div class="episode-info">
+          <h3 class="episode-title">{{ .Title }}</h3>
+          <div class="episode-meta">{{ .Date.Format "Jan 2006" }}{{ with .Params.duration }} &middot; {{ . }}{{ end }}</div>
+        </div>
+        <div class="episode-play-icon">
+          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- THE RULES — Show format breakdown -->
+<section class="section rules-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">The Format</div>
+    <h2 class="section-heading reveal">How this <em>works.</em></h2>
+    <p class="section-desc reveal">Four rules. Everything else is improvised.</p>
+
+    <div class="rules-grid">
+      <div class="rule-item reveal reveal-delay-1">
+        <div class="rule-number">01</div>
+        <div class="rule-title">Start with a question.</div>
+        <p class="rule-desc">Not a topic. Not a thesis. A real question I've been thinking about at 2 AM when I should be sleeping. If I already know the answer, it's not interesting enough.</p>
+        <span class="rule-neon"></span>
+      </div>
+
+      <div class="rule-item reveal reveal-delay-2">
+        <div class="rule-number">02</div>
+        <div class="rule-title">Follow the thread.</div>
+        <p class="rule-desc">No rigid outline. No five-point framework. If the conversation wants to go somewhere unexpected, we let it. The best episodes are the ones I didn't plan.</p>
+        <span class="rule-neon"></span>
+      </div>
+
+      <div class="rule-item reveal reveal-delay-3">
+        <div class="rule-number">03</div>
+        <div class="rule-title">No jargon without translation.</div>
+        <p class="rule-desc">If I use a legal term, I explain it. Not because you're not smart enough &mdash; because the legal profession has spent centuries making simple things sound complicated on purpose.</p>
+        <span class="rule-neon"></span>
+      </div>
+
+      <div class="rule-item reveal reveal-delay-4">
+        <div class="rule-number">04</div>
+        <div class="rule-title">No sponsors. No ads.</div>
+        <p class="rule-desc">This show exists because I want it to, not because someone's paying me to read mattress copy. The day that changes is the day this stops being fun.</p>
+        <span class="rule-neon"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- About the Host -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">The Host</div>
+    <h2 class="section-heading reveal">About <em>Blake.</em></h2>
+
+    <div class="about-layout">
+      <div class="about-text reveal">
+        <p class="lead">Tabula Rasa means <em>"blank slate."</em></p>
+        <p>I'm Blake Turley. I'm a technology and business lawyer based in Madison, Connecticut. I run <a href="{{ .Site.Params.firmURL | default "https://turleylaw.com" }}" style="color: var(--neon-cyan); text-decoration: none; text-shadow: 0 0 8px var(--glow-cyan);">Turley Law PLLC</a>, where I work with startups, founders, and growing businesses across CT, NY, and MA.</p>
+        <p>I went to Cornell Law School. I'm licensed in three states. I've read more operating agreements than any human should. And somewhere along the way I realized: <span class="snarky">law is actually fascinating</span> &mdash; we just have a PR problem.</p>
+        <p>This podcast is my attempt to fix that. No billable hours. No disclaimers at the end. Just a blank slate and a microphone and a question I can't stop thinking about.</p>
+        <p>Sometimes it's a contract clause. Sometimes it's a Supreme Court case. Sometimes it's why your landlord's lease is designed to confuse you. I follow the thread wherever it goes, because the interesting stuff is never where you expect it.</p>
+      </div>
+
+      <div class="about-sidebar reveal">
+        <div class="about-sidebar-label">Credentials</div>
+        <ul class="about-sidebar-list">
+          <li><a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}">Blake Turley</a></li>
+          <li>Cornell Law School</li>
+          <li>CT, NY &amp; MA Bar</li>
+          <li>Madison, Connecticut</li>
+        </ul>
+
+        <div class="about-sidebar-label">Also Find Me</div>
+        <ul class="about-sidebar-list">
+          <li><a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}">blaketurley.com</a></li>
+          <li><a href="{{ .Site.Params.firmURL | default "https://turleylaw.com" }}">turleylaw.com</a></li>
+          <li><a href="{{ .Site.Params.social.youtube | default "#" }}">YouTube</a></li>
+          <li><a href="{{ .Site.Params.social.linkedin | default "#" }}">LinkedIn</a></li>
+        </ul>
+
+        <div class="about-sidebar-label">Be a Guest?</div>
+        <ul class="about-sidebar-list">
+          <li><a href="mailto:{{ .Site.Params.email | default "hello@turleylaw.com" }}">Pitch me &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- Another pull quote -->
+<section class="pullquote-section">
+  <div class="container">
+    <p class="pullquote-text reveal">
+      If your lawyer can't explain it in plain English, they either don't understand it themselves &mdash; or they <span class="neon-word">don't want you to.</span>
+    </p>
+    <span class="pullquote-dash reveal"></span>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- Listen — Platform links -->
+<section id="listen" class="section listen-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Listen</div>
+    <h2 class="section-heading reveal">Pick your <em>platform.</em></h2>
+    <p class="section-desc reveal" style="margin-left: auto; margin-right: auto; text-align: center;">Available everywhere worth listening.</p>
+
+    <div class="listen-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <a href="{{ .Site.Params.social.youtube | default "#" }}" class="listen-card reveal">
+        <span class="listen-card-icon">&#9654;</span>
+        <div class="listen-card-name">YouTube</div>
+        <div class="listen-card-sub">Watch &amp; listen</div>
+      </a>
+      <a href="{{ .Site.Params.social.spotify | default "#" }}" class="listen-card reveal">
+        <span class="listen-card-icon">&#9835;</span>
+        <div class="listen-card-name">Spotify</div>
+        <div class="listen-card-sub">Stream</div>
+      </a>
+      <a href="{{ .Site.Params.social.rss | default "#" }}" class="listen-card reveal">
+        <span class="listen-card-icon">&#128225;</span>
+        <div class="listen-card-name">RSS</div>
+        <div class="listen-card-sub">Subscribe</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="neon-stripe"></div>
+
+<!-- Newsletter -->
+<section class="section newsletter-section">
+  <div class="container newsletter-content">
+    <div class="section-eyebrow reveal">The Inner Circle</div>
+    <h2 class="newsletter-heading reveal">Never miss an <em>episode.</em></h2>
+    <p class="newsletter-desc reveal">New episodes, behind-the-scenes chaos, and the occasional 2 AM thought I couldn't keep to myself. No spam. I have better things to do and so do you.</p>
+    <form class="newsletter-form reveal" action="#" method="POST">
+      <input type="email" name="email" class="newsletter-input" placeholder="your@email.com" required>
+      <button type="submit" class="newsletter-btn">Subscribe</button>
+    </form>
+    <p class="newsletter-note reveal">Unsubscribe anytime. No hard feelings.</p>
+  </div>
+</section>
+
+{{ end }}

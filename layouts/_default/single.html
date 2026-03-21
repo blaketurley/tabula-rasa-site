@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">Episode {{ .Params.number | default "" }}</div>
+    <h1 class="section-heading">{{ .Title }}</h1>
+    <div class="episode-meta" style="margin-bottom: 48px;">{{ .Date.Format "January 2, 2006" }}{{ with .Params.duration }} &middot; {{ . }}{{ end }}</div>
+    <div style="font-size: 20px; line-height: 1.8; color: var(--text-primary); max-width: 680px;">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
