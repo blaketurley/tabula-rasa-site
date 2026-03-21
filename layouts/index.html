@@ -310,11 +310,43 @@
     <div class="section-eyebrow reveal">The Inner Circle</div>
     <h2 class="newsletter-heading reveal">Never miss an <em>episode.</em></h2>
     <p class="newsletter-desc reveal">New episodes, behind-the-scenes chaos, and the occasional 2 AM thought I couldn't keep to myself. No spam. I have better things to do and so do you.</p>
-    <form class="newsletter-form reveal" action="#" method="POST">
+    <form class="newsletter-form reveal" id="subscribe-form">
       <input type="email" name="email" class="newsletter-input" placeholder="your@email.com" required>
-      <button type="submit" class="newsletter-btn">Subscribe</button>
+      <button type="submit" class="newsletter-btn" id="subscribe-btn">Subscribe</button>
     </form>
-    <p class="newsletter-note reveal">Unsubscribe anytime. No hard feelings.</p>
+    <p class="newsletter-note reveal" id="subscribe-status">Unsubscribe anytime. No hard feelings.</p>
+
+    <script>
+    document.getElementById('subscribe-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('subscribe-btn');
+      const status = document.getElementById('subscribe-status');
+      const email = e.target.email.value;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          status.textContent = "You're in! Check your email.";
+          status.style.color = '#39FF14';
+          e.target.email.value = '';
+          btn.textContent = 'Subscribed ✓';
+        } else {
+          throw new Error(data.error || 'Something went wrong');
+        }
+      } catch (err) {
+        status.textContent = err.message || 'Something went wrong. Try again.';
+        status.style.color = '#FF1493';
+        btn.textContent = 'Subscribe';
+        btn.disabled = false;
+      }
+    });
+    </script>
   </div>
 </section>
 
