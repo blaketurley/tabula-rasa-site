@@ -1,0 +1,23 @@
+name: Weekly Publishing Reminder
+
+on:
+  schedule:
+    # Every Monday at 9 AM Eastern (14:00 UTC)
+    - cron: '0 14 * * 1'
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send weekly reminder
+        run: |
+          curl -s -X POST "https://api.emailit.com/v2/emails" \
+            -H "Authorization: Bearer ${{ secrets.EMAILIT_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "from": "Project Cowboy <hello@mail.turleylaw.com>",
+              "to": "blake@turleylaw.com",
+              "reply_to": "hello@turleylaw.com",
+              "subject": "Weekly Reminder: Publish Something This Week",
+              "html": "<div style=\"font-family: Georgia, serif; max-width: 560px; margin: 0 auto; padding: 40px 20px; color: #222; line-height: 1.7;\"><h1 style=\"font-size: 22px; font-weight: normal; font-style: italic;\">Monday Check-in</h1><p>Quick reminder to publish something this week. Here are your options:</p><h3 style=\"color: #0080FF; font-size: 16px; margin-top: 24px;\">New Podcast Episode</h3><pre style=\"background: #1a1a2e; color: #39FF14; padding: 16px; border-radius: 6px; font-size: 13px;\">cd tabula-rasa-site\npython new-episode.py \"Title\" --duration \"45 min\"</pre><h3 style=\"color: #0080FF; font-size: 16px; margin-top: 24px;\">New Blog Post</h3><pre style=\"background: #1a1a2e; color: #00FFFF; padding: 16px; border-radius: 6px; font-size: 13px;\">cd blaketurley-site\npython new-post.py \"Title\" --section blog</pre><h3 style=\"color: #0080FF; font-size: 16px; margin-top: 24px;\">New Journal Entry</h3><pre style=\"background: #1a1a2e; color: #C9A96E; padding: 16px; border-radius: 6px; font-size: 13px;\">cd blaketurley-site\npython new-post.py \"Title\" --section journal --category law</pre><hr style=\"border: none; border-top: 1px solid #eee; margin: 28px 0;\"><p style=\"font-size: 14px; color: #666;\">Repos: <a href=\"https://github.com/blaketurley/tabula-rasa-site\">tabula-rasa</a> &middot; <a href=\"https://github.com/blaketurley/blaketurley-site\">blaketurley</a></p><p style=\"font-size: 12px; color: #999;\">Sent by Project Cowboy &middot; Edit .github/workflows/weekly-reminder.yml to change</p></div>"
+            }'
