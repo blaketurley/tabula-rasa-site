@@ -10,10 +10,21 @@
       <div class="footer-right">
         <div class="footer-social">
           <a href="{{ .Site.Params.social.youtube | default "#" }}">YouTube</a>
+          {{ if eq .Site.Params.spotifyStatus "coming-soon" }}
+          <span style="opacity: 0.4; cursor: default;" title="Spotify — Coming Soon">Spotify (Soon)</span>
+          {{ else }}
           <a href="{{ .Site.Params.social.spotify | default "#" }}">Spotify</a>
+          {{ end }}
+          {{ if eq .Site.Params.rssStatus "coming-soon" }}
+          <span style="opacity: 0.4; cursor: default;" title="RSS — Coming Soon">RSS (Soon)</span>
+          {{ else }}
           <a href="{{ .Site.Params.social.rss | default "#" }}">RSS</a>
+          {{ end }}
         </div>
-        <a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}" class="footer-back">blaketurley.com &rarr;</a>
+        <div class="footer-links">
+          <a href="{{ .Site.Params.firmURL | default "https://turleylaw.com" }}" class="footer-back">turleylaw.com &rarr;</a>
+          <a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}" class="footer-back">blaketurley.com &rarr;</a>
+        </div>
       </div>
     </div>
     <div class="footer-manifesto">Every episode starts with a blank slate.</div>

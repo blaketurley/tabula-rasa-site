@@ -24,6 +24,10 @@ enableEmoji = false
   firmURL = "https://turleylaw.com"
   youtubeChannel = "https://youtube.com/@blaketurley"
 
+  # Platform availability — set to actual URL when live, or "coming-soon" for placeholder
+  spotifyStatus = "coming-soon"
+  rssStatus = "coming-soon"
+
   [params.social]
     youtube = "https://youtube.com/@blaketurley"
     linkedin = "https://linkedin.com/in/blaketurley"

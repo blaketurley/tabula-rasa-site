@@ -460,6 +460,13 @@ body::after {
   text-shadow: none;
 }
 
+.platform-btn--soon {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+  border-style: dashed;
+}
+
 .platform-btn svg {
   width: 18px;
   height: 18px;
@@ -1348,6 +1355,19 @@ body::after {
   letter-spacing: 0.06em;
 }
 
+.listen-card--soon {
+  opacity: 0.35;
+  cursor: default;
+  border-style: dashed;
+}
+.listen-card--soon:hover {
+  transform: none;
+  border-color: var(--border);
+}
+.listen-card--soon .listen-card-sub {
+  color: var(--neon-gold);
+}
+
 /* ========================================
    NEWSLETTER — Subscribe CTA
    ======================================== */
@@ -1517,6 +1537,15 @@ body::after {
   text-shadow: 0 0 12px var(--glow-green);
 }
 
+.footer-social span {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 .footer-back {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -1529,6 +1558,11 @@ body::after {
 .footer-back:hover {
   color: var(--neon-gold);
   text-shadow: 0 0 12px var(--glow-gold);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
 }
 
 .footer-manifesto {

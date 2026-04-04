@@ -9,6 +9,7 @@
       {{ range .Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
+      <li><a href="{{ .Site.Params.firmURL | default "https://turleylaw.com" }}" class="nav-back">turleylaw.com</a></li>
       <li><a href="{{ .Site.Params.personalURL | default "https://blaketurley.com" }}" class="nav-back">blaketurley.com</a></li>
     </ul>
   </div>
